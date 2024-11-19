@@ -11,9 +11,11 @@
         </title>
 
         <script>
-            function greeting ()
+            function ctc4(num1, num2)
                 {
-                    window.alert("Hello there")
+                    let answer
+                    answer = num1 * num2
+                    return answer
                 }
 
         </script>
@@ -76,7 +78,17 @@
 
         <!-- CTC#4 -->
 
-                
+                <script>
+
+                    let num1 = parseInt(window.prompt ("enter a number"))
+                    let num2 = parseInt(window.prompt ("enter another number"))
+                    let result
+
+                    result = ctc4(num1,num2)
+
+                    window.alert(result)
+
+                </script>
 
     </body>
 
