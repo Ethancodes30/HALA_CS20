@@ -11,17 +11,58 @@
     </title>
 
     <script>
-        function radius()
+        function radius(num1, pi)
             {
+                let answer
 
+                //equation for surface area
+                answer = 4 * pi * num1 ** 2
+                return answer
             }
+    </script>
 
+    <script>
+        function volume (num2,pi)
+            {
+                let answer2
 
+                //equation for volume
+                answer2 = num2 ** 3 * 1.33 * pi
+
+                return answer2
+            }
     </script>
 </head>
 
 <body>
+    <script>
 
+        //to determine the first radius
+        let num1 = parseInt(window.prompt("enter the radius of a sphere to find it's surface area")) 
+        
+        let result
+
+        const pi = 3.141592653589793238462643383279502884197
+        
+        result = radius(num1, pi)
+
+        //shows the surface area
+        window.alert(result)
+    </script>
+
+    <script>
+        
+        //to find the second radius
+        let num2 = parseInt(window.prompt("enter another radius to find it's volume"))
+        
+        let result2
+
+        result2 = volume(num2,pi)
+
+        //shows the volume
+        window.alert(result2)
+
+    </script>
 
 
 </body>
