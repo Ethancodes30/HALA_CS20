@@ -26,6 +26,7 @@
 
     <body>
         <script>
+                //tells the computer your name so it can pair your average with your name
             let name = window.prompt("What is your name?")
 
                 document.write(name)
@@ -43,15 +44,15 @@
                             grades[asgmnt] = parseInt (window.prompt("what are your grades"))
                         }
 
-                    let result
-
-                        result = grades[0] + grades[1] + grades[2] + grades[3] + grades[4]
+                        let result
+                                //this will get us the sum of the gradesto calculate the final equation
+                            result = grades[0] + grades[1] + grades[2] + grades[3] + grades[4]
  
-                    let avg = 0
+                        let avg = 0
+                                //this equation will calculate the average of all your grades
+                            avg = result / 5
 
-                        avg = result / 5
-
-                    document.write(avg)
+                        document.write(avg)
 
         </script>
         
