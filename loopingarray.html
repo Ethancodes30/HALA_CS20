@@ -17,6 +17,11 @@
                     color:rgb(0, 26, 255);
                     font-size: xx-large;
                 }
+            
+            #name1
+                {
+                    color:white
+                }
 
 
 
@@ -31,26 +36,22 @@
 
                 document.write(name)
 
-                </script>
-
-                <script>
-
                 let grades = []
 
                 let asgmnt = 0
 
-                    for(asgmnt = 0; asgmnt < 5; asgmnt++)
+                    for(asgmnt = 0; asgmnt < 4; asgmnt++)
                         {
                             grades[asgmnt] = parseInt (window.prompt("what are your grades"))
                         }
 
                         let result
                                 //this will get us the sum of the gradesto calculate the final equation
-                            result = grades[0] + grades[1] + grades[2] + grades[3] + grades[4]
+                            result = grades[0] + grades[1] + grades[2] + grades[3]
  
                         let avg = 0
                                 //this equation will calculate the average of all your grades
-                            avg = result / 5
+                            avg = result / 4
 
                         document.write(avg)
 
