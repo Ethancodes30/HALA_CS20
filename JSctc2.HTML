@@ -50,7 +50,7 @@
                 //tells the computer your name so it can pair your average with your name
                 grades[4]= window.prompt("What is your name?")
 
-                    document.write(grades[4] + "  ")
+                    document.write(grades[4] + ".  ")
 
 
             
@@ -67,13 +67,23 @@
                     //this equation will calculate the average of all your grades
                 avg = result / 4
 
-                document.write("grade one is" + " " + grades[0] + " " + "grade two is" + " "+ grades[1] + " " + 
-                                "grade three is" + " " + grades[2] + " " + "grade four is" + " " + grades[3] + " " + "your overall average is"+ " " + avg)
+                document.write("grade one is" + " " + grades[0] + ". " + "grade two is" + " "+ grades[1] + ". " + 
+                                "grade three is" + " " + grades[2] + ". " + "grade four is" + " " + grades[3] + ". " + "your overall average is"+ " " + avg)
 
         </script>
 
         <script>
-            
+            if(avg = 100)
+            {
+                window.alert("YOU GOT 100%")
+            }
+
+            else
+            {
+                window.alert("You did not get 100%")
+            }
+
+
         </script>
         
     </body>
