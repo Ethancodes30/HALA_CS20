@@ -73,16 +73,25 @@
         </script>
 
         <script>
-            if(avg = 100)
-            {
-                window.alert("YOU GOT 100%")
-            }
+            if(avg > 100)
+                {
+                    window.alert("YOU GOT 100% THAT'S AN A+")
+                }
 
-            else
-            {
-                window.alert("You did not get 100%")
-            }
+            if(avg > 75 && avg < 100)
+                {
+                    window.alert("GREAT JOB YOU GOT" + avg + "B+")
+                }
 
+            if(avg > 50 && avg < 75)
+                {
+                    window.alert("okay not so good" + avg + "D+")
+                }   
+
+            if(avg < 50)
+                {
+                    window.alert("you failed" + avg + "F-")
+                }
 
         </script>
         
