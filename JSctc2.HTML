@@ -24,7 +24,7 @@
 
                 document.write(sport)
 
-                document.write(sport.length)
+                document.write(" " + sport.length)
 
         </script>
         
@@ -71,26 +71,26 @@
                                 ". grade three is " + grades[2] + ". grade four is " + grades[3] + ". your overall average is " + avg)
 
         </script>
-
+            <!-- conditional statements -->
         <script>
             if(avg > 100)
-                {
+                {       //this pop up will apear if you get more than 100%
                     window.alert("YOU GOT 100% THAT'S AN A+")
                 }
 
             if(avg > 75 && avg < 100)
-                {
-                    window.alert("GREAT JOB YOU GOT" + avg + "B+")
+                {       //This will appear if you get between 75% and 100%
+                    window.alert("GREAT JOB YOU GOT" + " " + avg + " " + "B+")
                 }
 
             if(avg > 50 && avg < 75)
-                {
-                    window.alert("okay not so good" + avg + "D+")
+                {       //this will pop up if the avg is between 50% and 75%
+                    window.alert("okay not so good" + " " + avg + " " + "D+")
                 }   
 
-            if(avg < 50 && avg = 50)
-                {
-                    window.alert("you failed" + avg + "F-")
+            if(avg < 50)
+                {       // this will show if you fail
+                    window.alert("you failed" + " " + avg +" " + "F-")
                 }
 
         </script>
