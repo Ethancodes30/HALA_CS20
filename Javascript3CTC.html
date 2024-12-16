@@ -14,16 +14,26 @@
 
              function dblclick()
                 {
-                    window.alert("you double cliked")
+                    window.alert("you double clicked")
                 }
 
         </script>
 
-         <script>
+         <script>//access forms
              function message1(form)
                 {
                       window.alert(document.getElementById("firstname").value)
                 }
+         </script>
+
+         <script>//changing properties
+            function check(checkbox)
+                {
+                    window
+                }
+
+
+
          </script>
             
     </head>
@@ -39,10 +49,13 @@
 
         <!-- access forms -->
         <form id="form1">
-            what is your firstname: <input type="text" id="firstname"> <br>
-            what is your lastname: <input type="text" id="lastname"> <br>
-            <input type="button" id="button3" value="ok" onclick="message1(this.form)" >
-       </form>
+            where aer you from<input type="text" id="firstname"> <br>
+            <input type="button" id="button3" value="thank you" onclick="message1(this.form)" >
+        </form>
+
+        <input type="checkbox" name="BEANS" value="torf"><br>
+
+
     </body>
 
 </html>
