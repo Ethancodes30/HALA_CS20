@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <title> js3CTC</title>
+
+        <script>//events
+             function snglclick()
+                {
+                    window.alert("you only clicked once")
+                }
+
+             function dblclick()
+                {
+                    window.alert("you double cliked")
+                }
+
+        </script>
+
+         <script>
+             function message1(form)
+                {
+                      window.alert(document.getElementById("firstname").value)
+                }
+         </script>
+            
+    </head>
+
+    
+    <body>
+        <!-- events -->
+        <input type="text" id="text1">
+        <input type="button" value="ok" id="button1" onclick="snglclick()">
+
+        <input type="text" id="text2">
+        <input type="button" value="ok" id="button2" ondblclick="dblclick()">
+
+        <!-- access forms -->
+        <form id="form1">
+            what is your firstname: <input type="text" id="firstname"> <br>
+            what is your lastname: <input type="text" id="lastname"> <br>
+            <input type="button" id="button3" value="ok" onclick="message1(this.form)" >
+       </form>
+    </body>
+
+</html>
