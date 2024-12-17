@@ -24,20 +24,31 @@
                 {
                       window.alert(document.getElementById("firstname").value)
                 }
+
+            function check(checkbox)
+                {
+                    window.alert(document.getElementById("BEANS").checked)
+                }
+
          </script>
 
          <script>//changing properties
-            function check(checkbox)
+            function changing()
                 {
-                    window
+                    document.getElementById("text1").style.background = "yellow"
+
+                    document.getElementById("text2").style.color = "green"
+
+                    document.getElementById("firstname").style.border = "red"
+
+                    document.getElementById("text2").style.bordertopcolor = "white"
+
+                    document.getElementById("text1").style.borderBottomColor = "orange"
                 }
-
-
 
          </script>
             
     </head>
-
     
     <body>
         <!-- events -->
@@ -45,16 +56,18 @@
         <input type="button" value="ok" id="button1" onclick="snglclick()">
 
         <input type="text" id="text2">
-        <input type="button" value="ok" id="button2" ondblclick="dblclick()">
+        <input type="button" value="ok" id="button2" ondblclick="dblclick()"><br><br>
 
         <!-- access forms -->
         <form id="form1">
-            where aer you from<input type="text" id="firstname"> <br>
-            <input type="button" id="button3" value="thank you" onclick="message1(this.form)" >
-        </form>
+            <input type="text" id="firstname"> <br>
+            <input type="button" id="button3" value="thank you" onclick="message1(this.form)">
+        </form><br>
 
-        <input type="checkbox" name="BEANS" value="torf"><br>
+        Are you chill?<input type="checkbox" name="beans" value="bet" id="BEANS" onclick="check(this.checkbox)"><br><br>
 
+        <!-- changing properties -->
+        <input type="button" id="button4" value="change the look" onclick="changing()">
 
     </body>
 
