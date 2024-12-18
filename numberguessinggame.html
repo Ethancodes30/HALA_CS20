@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>guessing game</title>
+
+    </head>
+
+    <body>
+        <script>
+            let max = window.prompt("Enter a maximum number")
+            let min = window.prompt("Enter a minimum number")
+
+            let randomnumber = Math.floor(Math.random() * max)
+
+            let numofguess = 0
+            
+            
+
+            for(numofguess = 1; numofguess > 0; numofguess++)
+                {
+                    let guess = window.prompt("guess a number")
+                
+
+                    if(randomnumber < guess)
+                        {
+                            window.alert("incorrect. too high")
+                        }
+
+                    if(randomnumber > guess)
+                        {
+                            window.alert("incorrect. too low")
+                        }
+
+                    if(randomnumber == guess)
+                        {
+                            window.alert("!!!CORRECT!!!")
+                        
+                            break;
+                        }
+            
+                }
+            document.write("CONGRATULATIONS!" + " THE CORRECT NUMBER WAS " + randomnumber + ". It took you " + numofguess + " guesses to get it correct")
+
+        </script>
+    </body>
+
+</html>
