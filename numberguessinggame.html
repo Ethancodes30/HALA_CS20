@@ -4,8 +4,9 @@
     <head>
         <title>guessing game</title>
 
+        <!-- this will make he game look nice -->
         <style>
-            body
+            body        
                 {
                     background-color: rgb(128, 173, 204);
 
@@ -27,16 +28,20 @@
 
     <body>
 
-        <script>
+        <script>//sets the minimum and maximum
             let max = window.prompt("Enter a maximum number")
             let min = window.prompt("Enter a minimum number")
 
+
+            //generates the random number
             let randomnumber = Math.floor(Math.random() * max)
 
+
+            //the number of guesses it takes to get it correct
             let numofguess = 0
             
             
-
+            //the loop will ask you to guess until you get it correct
             for(numofguess = 1; numofguess > 0; numofguess++)
                 {
                     let guess = window.prompt("guess a number")
@@ -60,6 +65,8 @@
                         }
             
                 }
+
+                //the message you receive after you guess correctly
             document.write("CONGRATULATIONS!" + " THE CORRECT NUMBER WAS " + randomnumber + ". It took you " + numofguess + " guesses to get it correct")
 
         </script>
