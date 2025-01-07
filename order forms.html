@@ -3,6 +3,23 @@
 <html>
     <head>
         <title>order forms</title>
+
+        <script>
+            function click()
+                {
+                    let cost 
+                    
+                    cost = (npencils*0.30 + npens*0.50 + neraser*1.00)
+
+                    return cost
+
+                }
+
+            function check(radio)
+                {
+                    window.alert("this is were you are from").checked
+                }
+        </script>
     </head>
 
     <body>
@@ -11,44 +28,53 @@
             BACK TO SCHOOL SALE
         </p>
 
-        pencils $0.30 <input type = "number" id="npencils"><br>
+        <form>
+            pencils $0.30 <input type = "number" id="npencils" min="0"><br>
 
-        pens $0.50 <input type = "number" id = "npens"><br>
+            pens $0.50 <input type = "number" id = "npens" min="0"><br>
 
-        erasers $1.00 <input type = "number" id = "neraser"><br><br>
+            erasers $1.00 <input type = "number" id = "neraser" min="0"><br><br>
 
-        <p id=p2 style="font-family: 'Times New Roman', Times, serif; font-size: larger;"> Where are you from </p><br>
+            <p id=p2 style="font-family: 'Times New Roman', Times, serif; font-size: larger;"> Where are you from? </p><br>
 
-        Saskatchewan <input type="radio" name="order" value="form" id="saskatchewan"><br>
+            Saskatchewan <input type="radio" name="order" value="form" id="saskatchewan" onclick = check(this.radio)><br>
 
-        Alberta <input type="radio" name="order" value="berta" id="alberta"><br>
+            Alberta <input type="radio" name="order" value="berta" id="alberta" onclick = check(this.radio)><br>
 
-        manitoba <input type="radio" name="order" value="manitoba" id="manitoba"><br>
-
-        <input type="submit" value="submit" id="submit">
+            manitoba <input type="radio" name="order" value="manitoba" id="manitoba" onclick = check(this.radio)><br>
+        </form>
+        <input type="button" value="check out" id="submit" onclick="click()">
+        
 
         <script>
+            document.write(cost)
 
-        let pencils = npencils
+            if (saskatchewan = true)
+                {
+                    let saskcost
 
-        let pens = npens
+                    saskcost = cost * .11
 
-        let erasers = neraser
+                    if (saskcost >= 30)
+                        {
+                            saskcost - 5
+                        }
+                }
 
-        let value = pencils + pens + erasers
+            if (alberta = true)
+                {
+                    let bertcost
 
-        let st = 0.11
+                    bertcost = cost * .5 + 2
 
-        let at = 0.05
+                }
 
-        let mt = 0.13
+            if (manitoba = true)
+                {
 
-        if (saskatchewan = true)
-            {
-                value * st
-            }
+                }
 
-            document.write(value)
+            
         </script>
     
     
