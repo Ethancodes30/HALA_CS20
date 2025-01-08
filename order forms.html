@@ -5,76 +5,108 @@
         <title>order forms</title>
 
         <script>
-            function click()
-                {
-                    let cost 
-                    
-                    cost = (npencils*0.30 + npens*0.50 + neraser*1.00)
-
-                    return cost
-
-                }
-
             function check(radio)
                 {
                     window.alert("this is were you are from").checked
+                }
+
+            function click(npencils, npens, neraser)
+                {
+
+                    npencils = parseInt(document.getElementById("npencils").value)
+
+                    npens = parseInt(document.getElementById("npens").value)
+
+                    neraser = parseInt(document.getElementById("neraser").value)
+
+                    cost = (npencils * 0.30 + npens * 0.50 + neraser * 1.00)
+
+                    
+
                 }
         </script>
     </head>
 
     <body>
+
+        
+
+
         <p id = p1 style ="text-align: center; font-family: 'Times New Roman', Times, serif; font-size: x-large;">
             SCHOOL SUPPLIES<br>
             BACK TO SCHOOL SALE
         </p>
 
         <form>
-            pencils $0.30 <input type = "number" id="npencils" min="0"><br>
+            pencils $0.30 <input type = "number" id="npencils" min="0" value="0"><br>
 
-            pens $0.50 <input type = "number" id = "npens" min="0"><br>
+            pens $0.50 <input type = "number" id = "npens" min="0" value="0"><br>
 
-            erasers $1.00 <input type = "number" id = "neraser" min="0"><br><br>
+            erasers $1.00 <input type = "number" id = "neraser" min="0" value="0"><br><br>
 
+            
             <p id=p2 style="font-family: 'Times New Roman', Times, serif; font-size: larger;"> Where are you from? </p><br>
 
-            Saskatchewan <input type="radio" name="order" value="form" id="saskatchewan" onclick = check(this.radio)><br>
+            Saskatchewan <input type="radio" name="order" value="form" id="saskatchewan" onclick = check(this.radio)> 5 dollar discount if final cost is over $30<br>
 
-            Alberta <input type="radio" name="order" value="berta" id="alberta" onclick = check(this.radio)><br>
+            Alberta <input type="radio" name="order" value="berta" id="alberta" onclick = check(this.radio)>     +2 dollar shipping <br>
 
-            manitoba <input type="radio" name="order" value="manitoba" id="manitoba" onclick = check(this.radio)><br>
+            manitoba <input type="radio" name="order" value="manitoba" id="manitoba" onclick = check(this.radio)> +2 dollar shipping <br>
         </form>
-        <input type="button" value="check out" id="submit" onclick="click()">
-        
+
+
+        <input type="button" value="check out" id="submit" onclick="click(npencils, npens, neraser)"><br><br><br>
 
         <script>
-            document.write(cost)
+
+            let cost
+
+            let total
 
             if (saskatchewan = true)
                 {
                     let saskcost
 
+                    let sasktotal
+
                     saskcost = cost * .11
+
+                    sasktotal=saskcost
 
                     if (saskcost >= 30)
                         {
                             saskcost - 5
+
+                            sasktotal = saskcost
+   
                         }
+                   
                 }
 
             if (alberta = true)
                 {
                     let bertcost
 
+                    let berttotal
+
                     bertcost = cost * .5 + 2
+
+                    berttotal = bertcost
 
                 }
 
             if (manitoba = true)
                 {
+                    let mancost
 
+                    let mantotal
+
+                    mancost = cost * .13 + 2
+
+                    mantotal = mancost
+    
                 }
 
-            
         </script>
     
     
