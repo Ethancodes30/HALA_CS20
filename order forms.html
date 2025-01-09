@@ -5,24 +5,44 @@
         <title>order forms</title>
 
         <script>
-            function check(radio)
-                {
-                    window.alert("this is were you are from").checked
-                }
-
-            function click(npencils, npens, neraser)
-                {
-
+            function check(npencils, npens, neraser)
+                {   //measures the amount of supplies
                     npencils = parseInt(document.getElementById("npencils").value)
 
                     npens = parseInt(document.getElementById("npens").value)
 
                     neraser = parseInt(document.getElementById("neraser").value)
 
-                    cost = (npencils * 0.30 + npens * 0.50 + neraser * 1.00)
+                    let cost = (npencils * 0.30 + npens * 0.50 + neraser * 1.00)//calculates base cost
 
-                    
+                    let total
 
+                    if (saskatchewan = true)
+                        {
+                            let saskcost
+
+                           total = cost * 1.11//calculates the cost if saskatchewan is selected
+                            if (total >= 30)
+                                {
+                                    total - 5//occurs when total is over $30 and saskatchewan is selected                         
+                                }
+                        }
+
+                    else if (alberta = true)
+                        {
+                            let bertcost
+
+                            total = cost * 1.05 + 2//calulates the cost if alberta is selected
+                        }
+
+                    else if (manitoba = true)
+                        {
+                            let mancost
+
+                            total = cost * 1.13 + 2//calculates the cost if Manitoba is selected
+                        }
+                        //displays the number of purchchased items and the total cost
+                    document.getElementById("useless").innerHTML = "the " + "total " + "cost " + "for " + npencils + "pencils" + " and " + npens + "pens" +" and " + neraser + "erasers" + " is " + "$" + total.toFixed(2)
                 }
         </script>
     </head>
@@ -47,74 +67,17 @@
             
             <p id=p2 style="font-family: 'Times New Roman', Times, serif; font-size: larger;"> Where are you from? </p><br>
 
-            Saskatchewan <input type="radio" name="order" value="form" id="saskatchewan" onclick = check(this.radio)> 5 dollar discount if final cost is over $30<br>
+            Saskatchewan <input type="radio" name="order" value="form" id="saskatchewan"> 5 dollar discount if final cost is over $30<br>
 
-            Alberta <input type="radio" name="order" value="berta" id="alberta" onclick = check(this.radio)>     +2 dollar shipping <br>
+            Alberta <input type="radio" name="order" value="berta" id="alberta">     +2 dollar shipping <br>
 
-            manitoba <input type="radio" name="order" value="manitoba" id="manitoba" onclick = check(this.radio)> +2 dollar shipping <br>
+            manitoba <input type="radio" name="order" value="manitoba" id="manitoba"> +2 dollar shipping <br>
         </form>
 
 
-        <input type="button" value="check out" id="submit" onclick="click(npencils, npens, neraser)"><br><br><br>
+        <input type="button" value="check out" id="submit" onclick="check(npencils, npens, neraser)"><br><br><br>
 
-        <script>
-
-            let cost
-
-            let total
-
-            if (saskatchewan = true)
-                {
-                    let saskcost
-
-                    let sasktotal
-
-                    saskcost = cost * .11
-
-                    sasktotal=saskcost
-
-                    if (saskcost >= 30)
-                        {
-                            saskcost - 5
-
-                            sasktotal = saskcost
-   
-                        }
-                   
-                    document.getElementById().innerHTML = sasktotal
-                }
-
-            if (alberta = true)
-                {
-                    let bertcost
-
-                    let berttotal
-
-                    bertcost = cost * .5 + 2
-
-                    berttotal = bertcost
-
-                    document.getElementById().innerHTML = berttotal
-
-                }
-
-            if (manitoba = true)
-                {
-                    let mancost
-
-                    let mantotal
-
-                    mancost = cost * .13 + 2
-
-                    mantotal = mancost
-
-                    document.write(mantotal)
-    
-                }
-
-        </script>
-    
-    
+        <p2 id="useless"></p2>
     </body>
 
 </html>
