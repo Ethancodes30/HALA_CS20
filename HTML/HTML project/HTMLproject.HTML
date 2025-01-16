@@ -2,55 +2,46 @@
 
 <html>
 
-    <head>
-
-           <title>star wars html project</title>
-
-           <style>
-                body{background-color: black; color: yellow; text-align: center;}
-
-                td
+<head>
+       <title>star wars html project</title>
+       <style>
+            body{background-color: black; color: yellow; text-align: center;}
+            td
+            {
+                border: 1px solid yellow; font-size: xx-large;
+            }
+       </style>
+       <script>
+            function play()
                 {
-                    border: 1px solid yellow; font-size: xx-large;
+                    var audio = new Audio('Star Wars.mp3')
+                    volume = 1
+                    audio.play()
                 }
-           </style>
+            </script>
+</head>
 
-           <script>
-                function click()
-                    {
-                        var audio = new Audio('star wars.mp3');
-                        audio.play();
-                    }
-                </script>
-    </head>
-
-    <body>
-        <script>
-            window.alert("the minimum age for this website is 7 years of age")
-            let age = window.prompt("please enter your age")
-
-            if (age<7)
-                {
-                    window.alert("you are not old enough for this website. Goodbye")
-
-                    window.close()
-                }
-        </script>
-
-        <img src="star wars logo.jpg" style="height: 300px"><br><br><br>
-        <table style="margin: auto; border-spacing: 20px;">
-            <tr>
-                <td id=characters style="padding: 30px; background-image: url('Luke1.jpg'); color:black"><a href="HTMLcharacters.HTML">characters</a></td>
-                <td style="padding: 60px; background-image: url('Hansolo1.jpg'); color:cornflowerblue"><a href="HTMLevents.HTML">events<br>and<br>story</a></td>
-                <td style="padding: 5px; background-image: url('DarthVader1.jpg'); color:darkslategray"><a href="HTMLcreator.HTML">about<br> George Lucas</a></td>
-            </tr>
-        </table><br><br><br>
-
-        to find more information on star wars <a href="https://starwars.fandom.com/wiki/Star_Wars">Click here </a>
-        to see the events and characters featured in this artical for yourself you can watch the movies to.
-
-        <input type="button" value="secret" id="star wars" onclick="click()">
-
-    </body>
+<body>
+    <script>
+        window.alert("the minimum age for this website is 7 years of age")
+        let age = window.prompt("please enter your age")
+        if (age<7)
+            {
+                window.alert("you are not old enough for this website. Goodbye")
+                window.close()
+            }
+    </script>
+    <img src="star wars logo.jpg" style="height: 300px"><br><br><br>
+    <table style="margin: auto; border-spacing: 20px;">
+        <tr>
+            <td id=characters style="padding: 30px; background-image: url('Luke1.jpg'); color:black"><a href="HTMLcharacters.HTML">characters</a></td>
+            <td style="padding: 60px; background-image: url('Hansolo1.jpg'); color:cornflowerblue"><a href="HTMLevents.HTML">events<br>and<br>story</a></td>
+            <td style="padding: 5px; background-image: url('DarthVader1.jpg'); color:darkslategray"><a href="HTMLcreator.HTML">about<br> George Lucas</a></td>
+        </tr>
+    </table><br><br><br>
+    to find more information on star wars <a href="https://starwars.fandom.com/wiki/Star_Wars">Click here </a>
+    to see the events and characters featured in this artical for yourself you can watch the movies to.
+    <input type="button" value="secret" id="star wars" onclick="play()">
+</body>
 
 </html>
