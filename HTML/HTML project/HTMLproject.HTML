@@ -11,22 +11,16 @@
                 border: 1px solid yellow; font-size: xx-large;
             }
        </style>
-       <script>
-            function play()
-                {
-                    
-                }
-            </script>
 </head>
 
 <body>
     <script>
         window.alert("the minimum age for this website is 7 years of age")
 
-        let age = window.prompt("please enter your age")
+        let age = window.prompt("please enter your age")//asks user for they're age
         
         if (age<7)
-            {
+            {   //closes the website if the age is not met
                 window.alert("you are not old enough for this website. Goodbye")
                 window.close()
             }
@@ -35,19 +29,16 @@
     <img src="star wars logo.jpg" style="height: 300px"><br><br><br>
 
     <table style="margin: auto; border-spacing: 20px;">
-        <tr>
+        <tr><!-- links to other places in the website -->
             <td style="padding: 30px; background-image: url('Luke1.jpg'); color:black"><a href="HTMLcharacters.HTML">characters</a></td>
             <td style="padding: 60px; background-image: url('Hansolo1.jpg'); color:cornflowerblue"><a href="HTMLevents.HTML">events<br>and<br>story</a></td>
             <td style="padding: 5px; background-image: url('DarthVader1.jpg'); color:darkslategray"><a href="HTMLcreator.HTML">about<br> George Lucas</a></td>
         </tr>
     </table><br><br><br>
 
-
+    <!-- link to a star wars wiki for more info -->
     to find more information on star wars <a href="https://starwars.fandom.com/wiki/Star_Wars">Click here </a>
     to see the events and characters featured in this artical for yourself you can watch the movies to.
-    
-    <input type="button" value="secret" id="star wars" onclick="play()">
-
 </body>
 
 </html>

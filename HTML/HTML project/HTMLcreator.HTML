@@ -4,26 +4,52 @@
 
 <head>
 
-           <title>about George Lucas</title>
+    <title>about George Lucas</title>
 
-           <style>
-                
-                body
-                {
-                    background-color:black; color:azure
-                }
-                
-                td
-                {
-                    border: 1px solid rgb(27, 27, 27);
+    <style>
+        
+         body
+         {
+             background-color:black; color:azure
+         }
+         
+         td
+         {
+             border: 1px solid rgb(27, 27, 27);
 
-                    text-align: center; font-size: 300 px;
-                }
-           </style>
+             text-align: center; font-size: 300 px;
+         }
+    </style>
+
+    <script>
+        function play()
+            {
+                let firstmovie = "A New Hope"// the correct movie
+
+                let numofguess = 0
+
+                for(numofguess = 1; numofguess > 0; numofguess++)
+                    {
+                        let guess = window.prompt("what was the first star wars movie released to theaters")//asks you to guess a star wars movie
+                    
+                        if(firstmovie != guess)
+                            {
+                                window.alert("incorrect")// appears when you guess wrong
+                            }
+                        
+                        else if(firstmovie == guess)
+                            {
+                                window.alert("!!!CORRECT!!!")// appears when you get the movie correct
+                            
+                                break;
+                            }
+                    }
+            }
+    </script>
 </head>
 
 <body>
-    <img src="george.jpg">
+    <img src="george.jpg"><!-- Image of george Lucas -->
     <h2> Early Life</h2>
     Geoge Lucas was born in Modesto, California on May 14,1944. His father George sr. owned a stationary store along with his mother<br>
     Dorothy. In the late 50s George and his family moved to a racnch-style house. It covered 13 acres and had several walnut trees.<br>
@@ -42,12 +68,14 @@
     He would put most of the money from the deal towards his  family philanthropy foundation where they have over $1 billion in assests.<br>
 
     <table style="background-color: rgb(27, 27, 27);">
-        <tr>
+        <tr> <!-- Links to other places inthe website -->
             <td style="background-color: rgb(27, 27, 27);"><a href="HTMLcharacters.HTML">characters</a></td>
             <td style="background-color: rgb(27, 27, 27);"><a href="HTMLevents.HTML">events<br>and<br>story</a></td>
             <td style="background-color: rgb(27, 27, 27);"><a href="HTMLproject.HTML">Home Page</a></td>
         </tr>
     </table>
+
+    <input type="button" value="Let's play a game" onclick="play()">
 </body>
 
 </html>
